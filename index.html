@@ -3,19 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Clínica de Columna</title>
+  <title>Clínica de Ortopedia y Columna Vertebral</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-image: url('https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Fondo.jpg');
+      background: url('https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Fondo.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
       color: #333;
     }
     header {
@@ -23,117 +17,97 @@
       padding: 1rem;
     }
     header img {
-      max-width: 200px;
-      border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 200px;
     }
     .portada {
       display: flex;
       justify-content: center;
-      margin: 2rem auto;
+      margin-top: 1rem;
     }
     .portada img {
-      max-width: 90%;
-      border-radius: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      width: 90%;
+      max-width: 800px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     section {
-      background: rgba(255, 255, 255, 0.95);
-      margin: 1rem auto;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: rgba(255, 255, 255, 0.9);
       padding: 2rem;
-      border-radius: 1rem;
-      width: 90%;
-      max-width: 900px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
     h2 {
+      color: #005B99;
       margin-bottom: 1rem;
-      color: #0b3d91;
     }
     .accordion {
-      margin-bottom: 1rem;
+      margin-top: 1rem;
     }
-    .accordion-item {
-      background: #f0f8ff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-bottom: 0.5rem;
-    }
-    .accordion-item button {
-      background: none;
-      border: none;
-      padding: 1rem;
+    .accordion button {
       width: 100%;
       text-align: left;
-      font-weight: bold;
+      padding: 1rem;
+      font-size: 1rem;
+      border: none;
+      outline: none;
+      background: #e0f0ff;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      color: #0b3d91;
-    }
-    .accordion-item button i {
-      margin-right: 1rem;
+      border-bottom: 1px solid #ccc;
     }
     .accordion-content {
       display: none;
       padding: 1rem;
+      background: #f9f9f9;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    form input, form select, form textarea {
-      margin-bottom: 1rem;
-      padding: 0.75rem;
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 0.8rem;
+      margin: 0.5rem 0;
       border-radius: 8px;
       border: 1px solid #ccc;
     }
     form button {
-      padding: 0.75rem;
-      background-color: #0b3d91;
+      background: #007BFF;
       color: white;
       border: none;
-      border-radius: 8px;
       cursor: pointer;
     }
-    #mensaje-exito {
-      display: none;
-      margin-top: 1rem;
-      padding: 1rem;
-      background-color: #d4edda;
-      border-left: 5px solid #28a745;
-      color: #155724;
-      border-radius: 0.5rem;
+    form button:hover {
+      background: #0056b3;
     }
-    @media screen and (max-width: 600px) {
+    #confirmation {
+      color: green;
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+    @media (max-width: 768px) {
       .portada img {
-        max-width: 100%;
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Logotipo_Vertebrae.png" alt="Logotipo Clínica de Columna">
+    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Logotipo_Vertebrae.png" alt="Logotipo Clínica">
   </header>
 
   <div class="portada">
-    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Portada.png" alt="Portada">
+    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Portada.png" alt="Portada Clínica">
   </div>
 
   <section>
     <h2>¿Quiénes somos?</h2>
-    <p>Somos una clínica médica especializada en ortopedia y columna vertebral, con un enfoque humano y profesional comprometido con tu salud.</p>
-  </section>
-  <section>
+    <p>Clínica especializada en ortopedia y columna vertebral con enfoque humano y profesional.</p>
+
     <h2>Misión</h2>
     <p>Brindar atención médica integral, accesible y de calidad.</p>
-  </section>
-  <section>
+
     <h2>Visión</h2>
     <p>Ser una clínica referente por excelencia, trato humano y compromiso con la salud en ortopedia.</p>
-  </section>
-  <section>
+
     <h2>Valores</h2>
     <ul>
       <li>Ética profesional</li>
@@ -142,106 +116,75 @@
       <li>Honestidad</li>
       <li>Responsabilidad</li>
     </ul>
-  </section>
 
-  <section>
-    <h2>Especialidades Médicas</h2>
+    <h2>Especialidades</h2>
     <div class="accordion">
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(this)"><i>🦴</i> Ortopedia de columna</button>
-        <div class="accordion-content">
-          <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Ortopedia%20de%20columna.jpg" width="100%">
-          <p>Diagnóstico y tratamiento de enfermedades del sistema musculoesquelético.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(this)"><i>💥</i> Traumatología de columna</button>
-        <div class="accordion-content">
-          <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Traumatolog%C3%ADa%20de%20columna%20.jpg" width="100%">
-          <p>Tratamiento especializado de lesiones traumáticas de la columna vertebral.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(this)"><i>🔪</i> Cirugía de columna</button>
-        <div class="accordion-content">
-          <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Cirug%C3%ADa%20de%20columna.jpg" width="100%">
-          <p>Intervenciones quirúrgicas avanzadas para mejorar tu calidad de vida.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(this)"><i>💆‍♂️</i> Quiropráctica</button>
-        <div class="accordion-content">
-          <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Quiropr%C3%A1ctica.jpg" width="100%">
-          <p>Terapias manuales para el alivio del dolor y mejora del movimiento.</p>
-        </div>
-      </div>
-      <div class="accordion-item">
-        <button onclick="toggleAccordion(this)"><i>🧬</i> Otras especialidades</button>
-        <div class="accordion-content">
-          <p>Contamos con un equipo multidisciplinario para brindarte atención integral.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <button onclick="toggleAccordion(this)">💪 Ortopedia de columna</button>
+      <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Ortopedia%20de%20columna.jpg" width="100%"></div>
 
-  <section>
-    <h2>Agendar Cita</h2>
-    <form id="formulario-cita">
-      <input name="Nombre" type="text" placeholder="Nombre completo" required />
-      <input name="Teléfono" type="tel" placeholder="Teléfono" required />
-      <input name="Correo electrónico" type="email" placeholder="Correo electrónico" required />
-      <select name="Sexo" required>
-        <option value="">Sexo</option>
+      <button onclick="toggleAccordion(this)">⚕️ Traumatología de columna</button>
+      <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Traumatolog%C3%ADa%20de%20columna%20.jpg" width="100%"></div>
+
+      <button onclick="toggleAccordion(this)">💉 Cirugía de columna</button>
+      <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Cirug%C3%ADa%20de%20columna.jpg" width="100%"></div>
+
+      <button onclick="toggleAccordion(this)">🦵 Quiropráctica</button>
+      <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Quiropr%C3%A1ctica.jpg" width="100%"></div>
+
+      <button onclick="toggleAccordion(this)">🤗 Otras especialidades</button>
+      <div class="accordion-content">Servicios complementarios y atención integral del sistema músculo-esquelético.</div>
+    </div>
+
+    <h2>Agendar cita</h2>
+    <form id="appointmentForm">
+      <input type="text" name="Nombre" placeholder="Nombre completo" required />
+      <input type="tel" name="Teléfono" placeholder="Teléfono" required />
+      <input type="email" name="Correo electrónico" placeholder="Correo electrónico" required />
+      <select name="Sexo">
         <option value="Femenino">Femenino</option>
         <option value="Masculino">Masculino</option>
         <option value="Otro">Otro</option>
       </select>
-      <select name="Especialidad" required>
-        <option value="">Especialidad</option>
-        <option>Ortopedia de columna</option>
-        <option>Traumatología de columna</option>
-        <option>Cirugía de columna</option>
-        <option>Quiropráctica</option>
-        <option>Otra</option>
+      <select name="Especialidad">
+        <option value="Ortopedia de columna">Ortopedia de columna</option>
+        <option value="Traumatología de columna">Traumatología de columna</option>
+        <option value="Cirugía de columna">Cirugía de columna</option>
+        <option value="Quiropráctica">Quiropráctica</option>
       </select>
-      <input name="Fecha" type="date" required />
-      <input name="Hora" type="time" required />
-      <textarea name="Comentarios" rows="4" placeholder="Comentarios"></textarea>
+      <input type="date" name="Fecha" required />
+      <input type="time" name="Hora" required />
+      <textarea name="Comentarios" placeholder="Comentarios adicionales"></textarea>
       <button type="submit">Agendar cita</button>
-      <div id="mensaje-exito">✅ Gracias, tu cita ha sido agendada. ⏳ Redirigiendo al inicio... 🎉 Te contactaremos pronto.</div>
     </form>
+    <div id="confirmation"></div>
   </section>
 
   <script>
-    function toggleAccordion(button) {
-      const content = button.nextElementSibling;
-      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    function toggleAccordion(btn) {
+      const content = btn.nextElementSibling;
+      content.style.display = content.style.display === "block" ? "none" : "block";
     }
 
-    document.getElementById('formulario-cita').addEventListener('submit', async function(e) {
+    document.getElementById("appointmentForm").addEventListener("submit", function (e) {
       e.preventDefault();
-      const formData = new FormData(this);
-      const params = new URLSearchParams();
-      for (const pair of formData.entries()) {
-        params.append(pair[0], pair[1]);
-      }
+      const form = e.target;
+      const data = new FormData(form);
+      const url = "https://script.google.com/macros/s/AKfycbwMlEyfNaNWs7nUl-Ob5yRmHNcNR0d34Igiki378hFDMmDbly4XE3XxYaCiuiMj--11xQ/exec";
 
-      try {
-        await fetch('https://script.google.com/macros/s/AKfycbwMlEyfNaNWs7nUl-Ob5yRmHNcNR0d34Igiki378hFDMmDbly4XE3XxYaCiuiMj--11xQ/exec', {
-          method: 'POST',
-          body: params
-        });
-
-        const mensaje = document.getElementById('mensaje-exito');
-        mensaje.style.display = 'block';
-        this.reset();
+      fetch(url, {
+        method: "POST",
+        body: data
+      })
+      .then(res => res.text())
+      .then(() => {
+        const confirmation = document.getElementById("confirmation");
+        confirmation.innerHTML = "✅ Gracias, tu cita ha sido agendada.<br>⏳ Redirigiendo al inicio...<br>🎉 Te contactaremos pronto.";
+        form.reset();
         setTimeout(() => {
-          mensaje.style.display = 'none';
+          confirmation.innerHTML = "";
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }, 5000);
-      } catch (error) {
-        alert('Error al enviar el formulario. Intenta nuevamente.');
-      }
+      });
     });
   </script>
 </body>
