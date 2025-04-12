@@ -1,254 +1,201 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clínica Vertebrae</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica de Columna Vertebrae</title>
   <style>
-    * {
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    body {
-      background-image: url('https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Fondo.jpg');
+      background: url('https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Fondo.jpg') no-repeat center center fixed;
       background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: center;
       color: #333;
     }
-
     header {
       text-align: center;
-      padding: 1rem;
-      background-color: rgba(255, 255, 255, 0.85);
+      padding: 1rem 0;
+      background-color: rgba(255, 255, 255, 0.8);
     }
-
     header img {
-      max-width: 150px;
+      max-width: 200px;
     }
-
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
     .portada {
-      display: flex;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .portada img {
-      width: 90%;
-      max-width: 800px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .section {
-      padding: 2rem;
-      background-color: rgba(255, 255, 255, 0.9);
-      margin: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    }
-
-    h2 {
-      color: #005b96;
-      margin-bottom: 1rem;
       text-align: center;
+      margin-bottom: 2rem;
     }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .portada img {
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
-    .accordion {
-      background-color: #f1f9ff;
-      border: 1px solid #cce0f5;
-      border-radius: 8px;
-      margin: 1rem 0;
+    h2 {
+      color: #004080;
+      border-bottom: 2px solid #cce;
+      padding-bottom: 0.5rem;
+    }
+    .accordion-item {
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .accordion-title {
       padding: 1rem;
+      background-color: #e6f0ff;
       cursor: pointer;
-      transition: 0.3s;
       display: flex;
       align-items: center;
-      gap: 10px;
+      justify-content: space-between;
     }
-
-    .accordion:hover {
-      background-color: #e0f0ff;
+    .accordion-title i {
+      margin-right: 10px;
     }
-
-    .panel {
-      padding: 0 1rem;
+    .accordion-content {
       display: none;
-      overflow: hidden;
-      background-color: #fff;
-      border-radius: 0 0 10px 10px;
-      margin-top: -1rem;
-      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
     }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
+    form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
     }
-
-    input, select, textarea, button {
-      padding: 0.75rem;
-      border-radius: 8px;
+    form input, form select, form textarea {
+      width: 100%;
+      padding: 0.5rem;
       border: 1px solid #ccc;
+      border-radius: 10px;
     }
-
-    button {
-      background-color: #0074cc;
+    form button {
+      margin-top: 1rem;
+      background-color: #007BFF;
       color: white;
       border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 10px;
       cursor: pointer;
     }
-
-    button:hover {
-      background-color: #005fa3;
-    }
-
-    #mensaje {
+    .confirmation {
       margin-top: 1rem;
-      padding: 0.5rem;
-      background-color: #d4edda;
-      color: #155724;
-      border-radius: 5px;
-      text-align: center;
+      color: green;
+      font-weight: bold;
       display: none;
-    }
-
-    @media (max-width: 768px) {
-      .portada img {
-        width: 100%;
-      }
     }
   </style>
 </head>
-
 <body>
   <header>
-    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Logotipo_Vertebrae.png" alt="Logo Clínica Vertebrae">
+    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Logotipo_Vertebrae.png" alt="Logo Clínica Vertebrae" />
   </header>
 
-  <div class="portada">
-    <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Portada.png" alt="Portada Clínica Vertebrae">
+  <div class="container">
+    <div class="portada">
+      <img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Portada.png" alt="Portada Clínica" />
+    </div>
+
+    <section>
+      <h2>¿Quiénes somos?</h2>
+      <p>Somos una clínica especializada en ortopedia y columna vertebral, brindando atención médica profesional y humana para el bienestar de nuestros pacientes.</p>
+      <h2>Misión</h2>
+      <p>Brindar atención médica integral, accesible y de calidad.</p>
+      <h2>Visión</h2>
+      <p>Ser una clínica referente por excelencia, trato humano y compromiso con la salud en ortopedia.</p>
+      <h2>Valores</h2>
+      <ul>
+        <li>Ética profesional</li>
+        <li>Empatía</li>
+        <li>Diversidad</li>
+        <li>Honestidad</li>
+        <li>Responsabilidad</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Especialidades Médicas</h2>
+      <div class="accordion-item">
+        <div class="accordion-title"><i>🔵</i>Ortopedia de columna</div>
+        <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Ortopedia%20de%20columna.jpg" style="width:100%;border-radius:10px;"><p>Tratamientos especializados para el cuidado estructural de la columna.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title"><i>🔵</i>Traumatología de columna</div>
+        <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Traumatolog%C3%ADa%20de%20columna%20.jpg" style="width:100%;border-radius:10px;"><p>Atención a lesiones y fracturas traumáticas en la columna vertebral.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title"><i>🔵</i>Cirugía de columna</div>
+        <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Cirug%C3%ADa%20de%20columna.jpg" style="width:100%;border-radius:10px;"><p>Intervenciones quirúrgicas avanzadas con enfoque mínimamente invasivo.</p></div>
+      </div>
+      <div class="accordion-item">
+        <div class="accordion-title"><i>🔵</i>Quiropráctica</div>
+        <div class="accordion-content"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Quiropr%C3%A1ctica.jpg" style="width:100%;border-radius:10px;"><p>Corrección manual de desajustes para mejorar la movilidad y aliviar el dolor.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Agendar Cita</h2>
+      <form id="cita-form">
+        <label>Nombre completo:</label><input type="text" name="Nombre" required />
+        <label>Teléfono:</label><input type="tel" name="Teléfono" required />
+        <label>Correo electrónico:</label><input type="email" name="Correo electrónico" required />
+        <label>Sexo:</label>
+        <select name="Sexo">
+          <option>Femenino</option>
+          <option>Masculino</option>
+          <option>Otro</option>
+        </select>
+        <label>Especialidad:</label>
+        <select name="Especialidad">
+          <option>Ortopedia de columna</option>
+          <option>Traumatología de columna</option>
+          <option>Cirugía de columna</option>
+          <option>Quiropráctica</option>
+          <option>Otras especialidades</option>
+        </select>
+        <label>Fecha:</label><input type="date" name="Fecha" required />
+        <label>Hora:</label><input type="time" name="Hora" required />
+        <label>Comentarios:</label><textarea name="Comentarios" rows="4"></textarea>
+        <button type="submit">Agendar Cita</button>
+        <div class="confirmation" id="confirmacion"></div>
+      </form>
+    </section>
   </div>
 
-  <section class="section">
-    <h2>¿Quiénes somos?</h2>
-    <p>Clínica especializada en ortopedia y columna vertebral, comprometida con la salud integral, atención humana y profesional.</p>
-  </section>
-
-  <section class="section">
-    <h2>Misión</h2>
-    <p>Brindar atención médica integral, accesible y de calidad en ortopedia y columna vertebral.</p>
-  </section>
-
-  <section class="section">
-    <h2>Visión</h2>
-    <p>Ser una clínica referente por excelencia médica, trato humano y compromiso con la salud.</p>
-  </section>
-
-  <section class="section">
-    <h2>Valores</h2>
-    <ul>
-      <li>✔ Ética profesional</li>
-      <li>✔ Empatía</li>
-      <li>✔ Diversidad</li>
-      <li>✔ Honestidad</li>
-      <li>✔ Responsabilidad</li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <h2>Especialidades Médicas</h2>
-
-    <div class="accordion">🦴 Ortopedia de columna</div>
-    <div class="panel"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Ortopedia%20de%20columna.jpg" width="100%"><p>Diagnóstico y tratamiento de trastornos óseos y musculares de la columna vertebral.</p></div>
-
-    <div class="accordion">💥 Traumatología de columna</div>
-    <div class="panel"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Traumatolog%C3%ADa%20de%20columna%20.jpg" width="100%"><p>Atención especializada en lesiones traumáticas de la columna vertebral.</p></div>
-
-    <div class="accordion">🔪 Cirugía de columna</div>
-    <div class="panel"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Cirug%C3%ADa%20de%20columna.jpg" width="100%"><p>Procedimientos quirúrgicos avanzados para tratar afecciones complejas.</p></div>
-
-    <div class="accordion">💆 Quiropráctica</div>
-    <div class="panel"><img src="https://raw.githubusercontent.com/xsmDaniel/ClinicadeColumna/main/Quiropr%C3%A1ctica.jpg" width="100%"><p>Terapias manuales para el alivio de dolores musculoesqueléticos.</p></div>
-
-    <div class="accordion">🧠 Otras especialidades</div>
-    <div class="panel"><p>Contamos con un equipo interdisciplinario de profesionales en salud integral.</p></div>
-  </section>
-
-  <section class="section">
-    <h2>Agendar cita</h2>
-    <form id="formulario">
-      <input type="text" name="Nombre" placeholder="Nombre completo" required>
-      <input type="tel" name="Teléfono" placeholder="Teléfono" required>
-      <input type="email" name="Correo electrónico" placeholder="Correo electrónico" required>
-      <select name="Sexo" required>
-        <option value="">Sexo</option>
-        <option value="Femenino">Femenino</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Otro">Otro</option>
-      </select>
-      <select name="Especialidad" required>
-        <option value="">Selecciona una especialidad</option>
-        <option>Ortopedia de columna</option>
-        <option>Traumatología de columna</option>
-        <option>Cirugía de columna</option>
-        <option>Quiropráctica</option>
-        <option>Otras especialidades</option>
-      </select>
-      <input type="date" name="Fecha" required>
-      <input type="time" name="Hora" required>
-      <textarea name="Comentarios" placeholder="Comentarios adicionales"></textarea>
-      <button type="submit">Agendar cita</button>
-      <div id="mensaje">✅ Gracias, tu cita ha sido agendada.<br>⏳ Redirigiendo al inicio...<br>🎉 Te contactaremos pronto.</div>
-    </form>
-  </section>
-
   <script>
-    const acc = document.getElementsByClassName("accordion");
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const panel = this.nextElementSibling;
-        panel.style.display = panel.style.display === "block" ? "none" : "block";
+    // Acordeón funcional
+    document.querySelectorAll(".accordion-title").forEach(title => {
+      title.addEventListener("click", () => {
+        const content = title.nextElementSibling;
+        content.style.display = content.style.display === "block" ? "none" : "block";
       });
-    }
+    });
 
-    document.getElementById("formulario").addEventListener("submit", function (e) {
+    // Envío de formulario
+    document.getElementById("cita-form").addEventListener("submit", function (e) {
       e.preventDefault();
       const formData = new FormData(this);
-      const data = {};
-      formData.forEach((value, key) => { data[key] = value });
-
       fetch("https://script.google.com/macros/s/AKfycbwMlEyfNaNWs7nUl-Ob5yRmHNcNR0d34Igiki378hFDMmDbly4XE3XxYaCiuiMj--11xQ/exec", {
         method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify(data),
-        headers: {
-          "Content-Type": "application/json"
-        }
-      }).then(() => {
-        const mensaje = document.getElementById("mensaje");
-        mensaje.style.display = "block";
+        body: formData
+      })
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("confirmacion").textContent = "✅ Gracias, tu cita ha sido agendada. ⏳ Redirigiendo al inicio... 🎉 Te contactaremos pronto.";
+        document.getElementById("confirmacion").style.display = "block";
         setTimeout(() => {
-          mensaje.style.display = "none";
-          document.getElementById("formulario").reset();
-          window.scrollTo({ top: 0, behavior: 'smooth' });
+          document.getElementById("confirmacion").style.display = "none";
+          document.getElementById("cita-form").reset();
+          window.scrollTo({ top: 0, behavior: "smooth" });
         }, 5000);
       });
     });
   </script>
 </body>
-
 </html>
