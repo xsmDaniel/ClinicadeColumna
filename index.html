@@ -218,10 +218,10 @@
     const form = document.getElementById('formulario');
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      fetch('https://script.google.com/macros/s/AKfycbwMlEyfNaNWs7nUl-Ob5yRmHNcNR0d34Igiki378hFDMmDbly4XE3XxYaCiuiMj--11xQ/exec', {
-        method: 'POST',
-        body: new FormData(form)
-      }).then(() => {
+  fetch('https://script.google.com/macros/s/AKfycbwMlEyfNaNWs7nUl-Ob5yRmHNcNR0d34Igiki378hFDMmDbly4XE3XxYaCiuiMj--11xQ/exec', {
+  method: 'POST',
+  body: new FormData(form)
+  }).then(() => {
         const mensaje = document.getElementById('mensaje');
         mensaje.style.display = 'block';
         form.reset();
